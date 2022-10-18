@@ -1,0 +1,33 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  --main-color: #212121;
+  --secondary-color: #757575;
+  --third-color: #F5F4FA;
+  --fourth-color: #F5F5F5;;
+  --accent-color: #ffffff;
+  --adress-color: rgba(255, 255, 255, 0.6);
+  --nav-color: #2196f3;
+  --logo-color: #000000;
+  --icons-color: #AFB1B8;
+}
+
+$premobile: 479px;
+$mobile: 480px;
+$pretablet: 767px;
+$tablet: 768px;
+$predesktop: 1199px;
+$desktop: 1200px;
+
+$mobile: 320px;
+$pre-tablet: 767px;
+$tablet: 768px;
+$pre-desctop: 1439px;
+$desctop: 1440px;
+
+$background-color: #191919;
+$titles-color: #E7E7E7;
+$text-color: rgba(255, 255, 255, 0.8);
+$accent-color: #DF3D3A;
+$button-text-color: rgba(255, 255, 255, 0.9);
+$footer-text-color: rgba(255, 255, 255, 0.3);

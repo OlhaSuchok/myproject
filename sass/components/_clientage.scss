@@ -1,0 +1,90 @@
+.clientage {
+  background-color: var(--accent-color);
+}
+
+.clientage__title {
+  text-align: center;
+  margin-bottom: 30px;
+  @include font-style(var(--main-font), 700, 28px, 1.18, 0.03em);
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
+  }
+}
+
+.clientage-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: $pretablet) {
+  .clientage-list__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+
+  .clientage-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  .clientage-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  .clientage-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $predesktop) {
+  .clientage-list__item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .clientage-list__item {
+    margin-bottom: 30px;
+    width: calc((100% - 60px) / 3);
+  }
+
+  .clientage-list__item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clientage-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clientage-list__link {
+  @include display-style(flex, center, center);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  height: 92px;
+  fill: var(--icons-color);
+
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--nav-color);
+    border: 1px solid var(--nav-color);
+  }
+}
+
+.clientage-list__logo {
+  width: 106px;
+  height: 60px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,108 @@
+.team {
+  background-color: var(--third-color);
+}
+
+.team__list {
+  @include display-style(flex, center, center);
+
+  @media screen and (max-width: $pretablet) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    flex-wrap: wrap;
+  }
+}
+
+.team__title {
+  text-align: center;
+
+  @media screen and (max-width: $predesktop) {
+    @include font-style(var(--main-font), 700, 28px, 1.18, 0.02em);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
+    margin-bottom: 50px;
+  }
+}
+
+.team__subtitle {
+  @include font-style(var(--main-font), 500, 16px, 1.18, 0.03em);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team__link {
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: $predesktop) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team__link:nth-child(odd) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    margin-right: 30px;
+  }
+}
+
+.team__picture {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.team__text {
+  @include font-style(var(--main-font), 400, 16px, 1.18, 0.03em);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.icons-list {
+  display: flex;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.icons-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icons-list__link {
+  @include display-style(flex, center, center);
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-color);
+  fill: var(--icons-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    background-color: var(--nav-color);
+  }
+}

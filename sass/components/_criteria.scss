@@ -1,0 +1,81 @@
+.criteria {
+  background-color: var(--accent-color);
+}
+
+.criteria__list {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: $pretablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $predesktop) {
+  .criteria__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+  .criteria__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  .criteria__item:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .criteria__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.criteria__title {
+  text-align: center;
+  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
+}
+
+.criteria__image {
+  @include display-style(flex, center, center);
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--third-color);
+
+  @media screen and (max-width: $pretablet) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
+}
+
+.criteria__subtitle {
+  @include font-style(var(--main-font), 700, 14px, 1.14, 0.03em);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+
+  @media screen and (max-width: $pretablet) {
+    text-align: center;
+  }
+}
+
+.criteria__text {
+  @include font-style(var(--main-font), 400, 14px, 1.7, 0.03em);
+  color: var(--secondary-color);
+}
